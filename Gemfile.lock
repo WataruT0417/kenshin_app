@@ -175,7 +175,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap (= 1.4.4)
-  bootstrap-sass
+  bootstrap-sass (= 3.4.1)
   byebug (= 11.0.1)
   coffee-rails (= 4.2.2)
   jbuilder (= 2.9.1)
