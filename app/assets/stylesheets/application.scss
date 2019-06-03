@@ -1,0 +1,338 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ * {
+  box-sizing: border-box;
+  font-size: 12px;
+}
+body {font-family:'Avenir','Helvetica, Neue','Helvetica','Arial';}
+
+h2 {
+  font-size: 18px;
+}
+
+.navbar-header {
+  a {
+    font-size: 14px;
+  }
+}
+
+/* 職員検索 */
+.search {
+  .btn-primary {
+    height: 30px;
+    font-size: 12px;
+  }
+  label {
+    padding-top: 5px;
+  }
+  .search-filter-container {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 960px;
+    .row {
+      margin-top: 10px;
+    }
+    .row-button {
+      margin-top: 30px;
+    }
+    .btn-col1 {
+      width: 75px;
+    }
+  }
+  .search-filter-label {
+    text-align: right;
+  }
+  .search-table-patientlist {
+    width: 960px;
+    text-align: center;
+  }
+}
+
+/* 職員追加 */
+.add {
+  .add-input-container {
+    margin-top: 20px;
+    width: 550px;
+  }
+  .add-input-container .form-row {
+    margin-top: 10px;
+  }
+
+  /*職員追加テーブル*/
+  .addpatientTableSearch {
+    width: 100%;
+    border-collapse:separate;
+    border-spacing: 0;
+  }
+
+  .addpatientTableSearch th:first-child{
+    border-radius: 5px 0 0 0;
+  }
+
+  .addpatientTableSearch th:last-child{
+    border-radius: 0 5px 0 0;
+    border-right: 1px solid #3c6690;
+  }
+
+  .addpatientTableSearch th{
+    text-align: center;
+    color:white;
+    background: linear-gradient(#829ebc,#225588);
+    border-left: 1px solid #3c6690;
+    border-top: 1px solid #3c6690;
+    border-bottom: 1px solid #3c6690;
+    box-shadow: 0px 1px 1px rgba(255,255,255,0.3) inset;
+    width: 20%;
+    padding: 10px 0;
+  }
+
+  .addpatientTableSearch td{
+    text-align: center;
+    border-left: 1px solid #a8b7c5;
+    border-bottom: 1px solid #a8b7c5;
+    border-top:none;
+    box-shadow: 0px -3px 5px 1px #eee inset;
+    width: 20%;
+    padding: 10px 0;
+  }
+
+  .addpatientTableSearch td:last-child{
+    border-right: 1px solid #a8b7c5;
+  }
+
+  .addpatientTableSearch tr:last-child td:first-child {
+    border-radius: 0 0 0 5px;
+  }
+
+  .addpatientTableSearch tr:last-child td:last-child {
+    border-radius: 0 0 5px 0;
+  }
+
+  #tableEventShifter{
+    position:absolute;
+    z-index: -10;
+    height:0;
+  }
+
+  /* モーダルCSS */
+  .modalAddpatientSearch {
+    display: none;
+    position: fixed;
+    z-index: 30; /*サイトによってここの数値は調整 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .modalBg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(30,30,30,0.9);
+  }
+
+  .modalWrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    width: 70%;
+    max-width: 920px;
+    padding: 10px 30px;
+    background-color: #fff;
+  }
+
+  .closeModal {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    cursor: pointer;
+  }
+
+  /* 職員追加 - 検索結果 - ボタン */
+  .addpatientModalButtonList {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  #openModal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+  }
+
+  .selected {background:gray;}
+
+}
+
+/* 結果入力 */
+.result {
+  /* 全エリア共通 */
+  .btn-primary {
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .container-resultview {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    width: 1000px;
+  }
+  /* ヘッダエリア */
+  .resultviewHeader {
+    width: 1000px;
+    float: left;
+  }
+  /* ID入力エリア */
+  .resultviewIDArea {
+    border: solid 1px gray;
+    border-radius: 10px;
+    float: left;
+    padding: 5px 0 0 10px;
+    margin: 10px;
+    width: 400px;
+    height: 130px;
+
+    input {
+      height: 30px;
+      font-size: 12px;
+    }
+
+    .btn {
+      height: 30px;
+      font-size: 12px;
+    }
+
+    .form-row {
+      padding: 5px 0;
+      font-size: 20px;
+    }
+  }
+  /* 健診コース選択エリア */
+  .resultviewCourseSelectArea {
+    float: left;
+    margin-left: 200px;
+    margin-top: 10px;
+    width: 300px;
+    height: 100px;
+    display: block;
+    text-align: left;
+  }
+
+  .CourseSelectTableHead {
+    width: 300px;
+    border: solid 1px #666;
+    height: 30px;
+    background: #f5f5f5;
+    td {
+      border: solid 1px #666;
+      height: 20px;
+    }
+    .column1 {
+      width: 100px;
+    }
+    .column2 {
+      width: 200px;
+    }
+  }
+
+  .CourseSelectTable {
+    width: 300px;
+    border: solid 1px #666;
+    height: 100px;
+    background: #ffffff;
+    overflow: auto;
+    td {
+      border: solid 1px #666;
+    }
+    .column1 {
+      width: 100px;
+    }
+    .column2 {
+      width: 200px;
+    }
+  }
+
+  /* 詳細入力エリア */
+  .resultviewResultLeftArea {
+    float: left;
+    padding: 5px 0 0 10px;
+    margin: 10px;
+    width: 600px;
+    height: 530px;
+    input {
+      height: 30px;
+      font-size: 12px;
+    }
+    .form-row {
+      padding: 5px 0;
+      font-size: 20px;
+      .label_right {
+        text-align: right;
+      }
+    }
+    #doctorcomment {
+      height: 70px;
+    }
+
+    textarea {
+      -webkit-border-radius: 10px;
+      border: solid 1px #CCCCCC;
+      resize: none;
+    }
+  }
+
+  .resultviewResultRightArea  {
+    float: left;
+    margin-top: 10px;
+    width: 300px;
+    height: 500px;
+    display: block;
+    text-align: center;
+  }
+
+  .testResultTable {
+    width: 300px;
+    border: solid 1px #666;
+    height: 20px;
+    background: #f5f5f5;
+    overflow: auto;
+    tbody {
+      background: #ffffff;
+    }
+    td {
+      border: solid 1px #666;
+    }
+    .column1 {
+      width: 200px;
+    }
+    .column2 {
+      width: 100px;
+    }
+  }
+
+  /* ボタンエリア */
+  .resultviewButtonListArea {
+    float: left;
+    width: 1000px;
+    height: 50px;
+    display: block;
+    text-align: center;
+  }
+
+}

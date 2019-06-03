@@ -1,7 +1,219 @@
-<% provide(:title, "Home") %>
-<h1>Sample App</h1>
-<p>
-  This is the home page for the
-  <a href="https://railstutorial.jp/">Ruby on Rails Tutorial</a>
-  sample application.
-</p>
+<% provide(:title, "職員検索") %>
+<div class="container search-filter-container">
+    <h2 text-align='center'>職員検索</h2>
+    <form>
+      <div class="row">
+        <div class="col-md-1 search-filter-label">
+          <label for="text9a">ID</label>
+        </div>
+        <div class="col-md-2">
+          <input type="text" id="text9a" class="form-control">
+        </div>
+        <div class="col-md-2 search-filter-label">
+          <label for="text8a">かな氏名</label>
+        </div>
+        <div class="col-md-3">
+          <input type="text" id="text9a" class="form-control">
+        </div>
+        <div class="col-md-1 search-filter-label">
+          <label for="text9a">所属</label>
+        </div>
+        <div class="col-md-3">
+          <select id="addpatient-belongs" class="form-control">
+            <option selected>全施設</option>
+            <option>大谷地病院</option>
+            <option>ナーシングヴィラ</option>
+            <option>レガロ大谷地</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2 offset-md-3 search-filter-label">
+          <label for="text9a">漢字氏名</label>
+        </div>
+        <div class="col-md-3">
+          <input type="text" id="text9a" class="form-control">
+        </div>
+        <div class="col-md-3 offset-md-1">
+          <select id="addpatient-subbelongs" class="form-control">
+            <option selected>全部署</option>
+            <option>医局</option>
+            <option>検査科</option>
+            <option>放射線科</option>
+            <option>栄養科</option>
+            <option>デイケア</option>
+            <option>訪問看護</option>
+            <option>理学療法室</option>
+            <option>作業療法室</option>
+            <option>言語聴覚療法室</option>
+            <option>臨床心理室</option>
+            <option>看護部長室</option>
+            <option>リスクマネージャー室</option>
+            <option>薬局</option>
+            <option>経理</option>
+            <option>事務</option>
+            <option>1病棟</option>
+            <option>2病棟</option>
+            <option>3病棟</option>
+            <option>4病棟</option>
+            <option>5病棟</option>
+            <option>6病棟</option>
+          </select>
+        </div>
+      </div>
+      <div class="row row-button">
+        <div class="col-md-2 offset-md-8">
+          <button type="button" class="btn btn-primary">　クリア　</button>
+        </div>
+        <div class="col-md-2">
+          <button type="button" class="btn btn-primary">　検　索　</button>
+        </div>
+      </div>
+      <div class="row row-button">
+        <div class="col-md-1">
+          <button type="button" class="btn btn-primary btn-col1">全選択</button>
+        </div>
+        <div class="col-md-1">
+          <button type="button" class="btn btn-primary btn-col1">全解除</button>
+        </div>
+        <div class="col-md-1 offset-md-1">
+          <button type="button" class="btn btn-primary btn-col1">一括予約</button>
+        </div>
+        <div class="col-md-1">
+          <button type="button" class="btn btn-primary btn-col1">一括印刷</button>
+        </div>
+        <div class="col-md-2 offset-md-1">
+          <button type="button" class="btn btn-primary">職員基本情報</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="container search-table-patientlist">
+    <table class="table">
+      <thead class="search-table-patientlist-thead">
+        <tr>
+          <th scope="col">選択</th>
+          <th scope="col">番号</th>
+          <th scope="col">漢字氏名</th>
+          <th scope="col">かな氏名</th>
+          <th scope="col">生年月日</th>
+          <th scope="col">性別</th>
+          <th scope="col">所属施設</th>
+          <th scope="col">部署</th>
+          <th scope="col">入職年月日</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td scope="col"><input type="checkbox" name="cloth_cover[01]" id="cloth_cover_01" value="test_co1" /></td>
+          <td scope="col">50001</td>
+          <td scope="col">テスト　職員１</td>
+          <td scope="col">テスト　しょくいん１</td>
+          <td scope="col">1989/01/01</td>
+          <td scope="col">男性</td>
+          <td scope="col">大谷地病院</td>
+          <td scope="col">事務</td>
+          <td scope="col">2002/05/01</td>
+        </tr>
+        <tr>
+          <td scope="col"><input type="checkbox" name="cloth_cover[01]" id="cloth_cover_01" value="test_co1" /></td>
+          <td scope="col">50001</td>
+          <td scope="col">テスト　職員１</td>
+          <td scope="col">テスト　しょくいん１</td>
+          <td scope="col">1989/01/01</td>
+          <td scope="col">男性</td>
+          <td scope="col">大谷地病院</td>
+          <td scope="col">事務</td>
+          <td scope="col">2002/05/01</td>
+        </tr>
+        <tr>
+          <td scope="col"><input type="checkbox" name="cloth_cover[01]" id="cloth_cover_01" value="test_co1" /></td>
+          <td scope="col">50001</td>
+          <td scope="col">テスト　職員１</td>
+          <td scope="col">テスト　しょくいん１</td>
+          <td scope="col">1989/01/01</td>
+          <td scope="col">男性</td>
+          <td scope="col">大谷地病院</td>
+          <td scope="col">事務</td>
+          <td scope="col">2002/05/01</td>
+        </tr>
+        <tr>
+          <td scope="col"><input type="checkbox" name="cloth_cover[01]" id="cloth_cover_01" value="test_co1" /></td>
+          <td scope="col">50001</td>
+          <td scope="col">テスト　職員１</td>
+          <td scope="col">テスト　しょくいん１</td>
+          <td scope="col">1989/01/01</td>
+          <td scope="col">男性</td>
+          <td scope="col">大谷地病院</td>
+          <td scope="col">事務</td>
+          <td scope="col">2002/05/01</td>
+        </tr>
+        <tr>
+          <td scope="col"><input type="checkbox" name="cloth_cover[01]" id="cloth_cover_01" value="test_co1" /></td>
+          <td scope="col">50001</td>
+          <td scope="col">テスト　職員１</td>
+          <td scope="col">テスト　しょくいん１</td>
+          <td scope="col">1989/01/01</td>
+          <td scope="col">男性</td>
+          <td scope="col">大谷地病院</td>
+          <td scope="col">事務</td>
+          <td scope="col">2002/05/01</td>
+        </tr>
+        <tr>
+          <td scope="col"><input type="checkbox" name="cloth_cover[01]" id="cloth_cover_01" value="test_co1" /></td>
+          <td scope="col">50001</td>
+          <td scope="col">テスト　職員１</td>
+          <td scope="col">テスト　しょくいん１</td>
+          <td scope="col">1989/01/01</td>
+          <td scope="col">男性</td>
+          <td scope="col">大谷地病院</td>
+          <td scope="col">事務</td>
+          <td scope="col">2002/05/01</td>
+        </tr>
+        <tr>
+          <td scope="col"><input type="checkbox" name="cloth_cover[01]" id="cloth_cover_01" value="test_co1" /></td>
+          <td scope="col">50001</td>
+          <td scope="col">テスト　職員１</td>
+          <td scope="col">テスト　しょくいん１</td>
+          <td scope="col">1989/01/01</td>
+          <td scope="col">男性</td>
+          <td scope="col">大谷地病院</td>
+          <td scope="col">事務</td>
+          <td scope="col">2002/05/01</td>
+        </tr>
+        <tr>
+          <td scope="col"><input type="checkbox" name="cloth_cover[01]" id="cloth_cover_01" value="test_co1" /></td>
+          <td scope="col">50001</td>
+          <td scope="col">テスト　職員１</td>
+          <td scope="col">テスト　しょくいん１</td>
+          <td scope="col">1989/01/01</td>
+          <td scope="col">男性</td>
+          <td scope="col">大谷地病院</td>
+          <td scope="col">事務</td>
+          <td scope="col">2002/05/01</td>
+        </tr>
+        <tr>
+          <td scope="col"><input type="checkbox" name="cloth_cover[01]" id="cloth_cover_01" value="test_co1" /></td>
+          <td scope="col">50001</td>
+          <td scope="col">テスト　職員１</td>
+          <td scope="col">テスト　しょくいん１</td>
+          <td scope="col">1989/01/01</td>
+          <td scope="col">男性</td>
+          <td scope="col">大谷地病院</td>
+          <td scope="col">事務</td>
+          <td scope="col">2002/05/01</td>
+        </tr>
+        <tr>
+          <td scope="col"><input type="checkbox" name="cloth_cover[01]" id="cloth_cover_01" value="test_co1" /></td>
+          <td scope="col">50001</td>
+          <td scope="col">テスト　職員１</td>
+          <td scope="col">テスト　しょくいん１</td>
+          <td scope="col">1989/01/01</td>
+          <td scope="col">男性</td>
+          <td scope="col">大谷地病院</td>
+          <td scope="col">事務</td>
+          <td scope="col">2002/05/01</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

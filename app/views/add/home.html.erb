@@ -1,0 +1,204 @@
+<% provide(:title, "職員追加") %>
+
+<div class="container add-input-container">
+    <h2 text-align='center'>職員登録</h2>
+    <form>
+      <div class="form-row align-items-center">
+        <div class="col-3">
+          <label for="text9a">ID</label>
+        </div>
+        <div class="col-7">
+          <input type="text" id="text9a" class="form-control">
+        </div>
+        <div class="col-2">
+          <button type="button" class="btn btn-primary">新規</button>
+        </div>
+      </div>
+      <div class="form-row align-items-center">
+        <div class="col-3">
+          <label for="text9a">かな氏名</label>
+        </div>
+        <div class="col-7">
+          <input type="text" id="text9a" class="form-control">
+        </div>
+        <div class="col-2">
+          <button type="button" id="add-btn-search" class="btn btn-primary">検索</button>
+        </div>
+      </div>
+      <div class="form-row align-items-center">
+        <div class="col-3">
+          <label for="text9a">漢字氏名</label>
+        </div>
+        <div class="col-7">
+          <input type="text" id="text9a" class="form-control">
+        </div>
+      </div>
+      <div class="form-row align-items-center">
+        <div class="col-3">
+          <label for="text9a">性別</label>
+        </div>
+        <div class="col-7">
+          <select id="inputState" class="form-control">
+            <option selected></option>
+            <option>男性</option>
+            <option>女性</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row align-items-center">
+        <div class="col-3">
+          <label for="text9a">生年月日</label>
+        </div>
+        <div class="col-7">
+          <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+            <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker1" />
+            <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
+              <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-row align-items-center">
+        <div class="col-3">
+          <label for="text9a">所属</label>
+        </div>
+        <div class="col-7">
+          <select id="addpatient-belongs" class="form-control">
+            <option selected></option>
+            <option>大谷地病院</option>
+            <option>ナーシングヴィラ</option>
+            <option>レガロ大谷地</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row align-items-center">
+        <div class="col-3">
+          <label for="text9a"></label>
+        </div>
+        <div class="col-7">
+          <select id="add-subbelongs" class="form-control">
+            <option selected></option>
+            <option>医局</option>
+            <option>検査科</option>
+            <option>放射線科</option>
+            <option>栄養科</option>
+            <option>デイケア</option>
+            <option>訪問看護</option>
+            <option>理学療法室</option>
+            <option>作業療法室</option>
+            <option>言語聴覚療法室</option>
+            <option>臨床心理室</option>
+            <option>看護部長室</option>
+            <option>リスクマネージャー室</option>
+            <option>薬局</option>
+            <option>経理</option>
+            <option>事務</option>
+            <option>1病棟</option>
+            <option>2病棟</option>
+            <option>3病棟</option>
+            <option>4病棟</option>
+            <option>5病棟</option>
+            <option>6病棟</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-row align-items-center">
+        <div class="col-3">
+          <label for="text9a">入職年月日</label>
+        </div>
+        <div class="col-7">
+          <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+            <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker1" />
+            <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
+              <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="form-row align-items-center">
+        <div class="col-3">
+          <label for="text9a"></label>
+        </div>
+      </div>
+      <div class="form-row align-items-center">
+        <div class="col-3">
+        </div>
+        <div class="col-3">
+          <button type="button" class="btn btn-primary">　 新規 　</button>
+        </div>
+        <div class="col-3">
+          <button type="button" class="btn btn-primary">　クリア　</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <!-- ModalArea START-->
+  <section id="modalAddpatientSearch" class="modalAddpatientSearch">
+    <div id="modalBg" class="modalBg"></div>
+    <div class="modalWrapper">
+      <div class="modalContents">
+        <h1>検索結果</h1>
+        <input type="text" id="tableEventShifter" readonly>
+        <table id="addpatientTableSearch" class="addpatientTableSearch">
+          <tr>
+            <th>患者番号</th>
+            <th>かな氏名</th>
+            <th>漢字氏名</th>
+            <th>性別</th>
+            <th>生年月日</th>
+          </tr>
+          <tr>
+            <td>90011</td>
+            <td>てすと　しょくいん１１</td>
+            <td>テスト　職員１１</td>
+            <td>男性</td>
+            <td>1989/01/11</td>
+          </tr>
+          <tr>
+            <td>90012</td>
+            <td>てすと　しょくいん１２</td>
+            <td>テスト　職員１２</td>
+            <td>男性</td>
+            <td>1989/01/12</td>
+          </tr>
+          <tr>
+            <td>90013</td>
+            <td>てすと　しょくいん１３</td>
+            <td>テスト　職員１３</td>
+            <td>男性</td>
+            <td>1989/01/13</td>
+          </tr>
+          <tr>
+            <td>90014</td>
+            <td>てすと　しょくいん１４</td>
+            <td>テスト　職員１４</td>
+            <td>男性</td>
+            <td>1989/01/14</td>
+          </tr>
+          <tr>
+            <td>90015</td>
+            <td>てすと　しょくいん１５</td>
+            <td>テスト　職員１５</td>
+            <td>男性</td>
+            <td>1989/01/15</td>
+          </tr>
+        </table>
+      </div>
+      <div class="container addpatientModalButtonList">
+        <div class="row align-items-center">
+          <div class="col-4">
+            <button id="addpatientModalButtonCancel">キャンセル</button>
+          </div>
+          <div class="col-4 offset-4">
+            <button id="addpatientModalButtonOK">　確定　</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ModalArea END-->
+  <script type="text/javascript" src="js/moment-with-locales.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/medicheck.js"></script>
+</body>

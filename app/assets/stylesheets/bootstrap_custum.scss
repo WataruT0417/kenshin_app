@@ -1,0 +1,19 @@
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+* {
+  box-sizing: border-box;
+  font-size: 12px;
+}
+body {font-family:'Avenir','Helvetica, Neue','Helvetica','Arial';}
+
+h2 {
+  font-size: 18px;
+}
+
+.navbar-header {
+  a {
+    font-size: 14px;
+  }
+}
